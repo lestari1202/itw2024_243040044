@@ -1,29 +1,92 @@
-<html>
-   <head>
-      <title>Table</title>
-   </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale">
+  <title>Document</title>
+</head>
 <body>
-    <table width="30%" BORDER="1">
-              <tr>
-                <td rowspan="5">rowspan = 5</td>
-                <td colspan="2">colspan = 2</td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-              </tr>
-        </table>
-    </body>
+    <table border="2" cellspacing="0" width="58%" align="center" cellpadding="5">
+        <tr>
+            <th colspan="3" style="background-color:gray;">Input Data Mahasiswa</th>
+        </tr>
+
+        <tr>
+            <from>
+                <td>Username</td>
+                <td>:</td>
+                <td><input type="username"name=username></td>
+            </from>
+        </tr>
+
+        <tr>
+            <from>
+              <td>Password</td>
+              <td>:</td>
+              <td><input type="password"name=password></td>
+            </from>
+        </tr>
+
+        <tr>
+            <from>
+                <td>Fullname</td>
+                <td>:</td>
+                <td><input type="text"name=fullname></td>
+            </from>
+        </tr>
+
+        <tr>
+            <from>
+                <td>E-mail</td>
+                <td>:</td>
+                <td><input type="password"name=E-mail></td>
+            </from>
+        </tr>
+
+        <tr>
+                <td>Agama</td>
+                <td>:</td>
+                <td>
+                <select>
+                  <option name="agama" selected>--Pilih agama--</option>
+                  <option value="Islam">Islam</option>
+                  <option value="Kristen">Kristen</option>
+                  <option value="Hindu">Hindu</option>          
+                </select>
+                </td>
+        </tr>
+
+        <tr>
+            <td>Jenis Kelamin</td>
+            <td>:</td>
+            <td><input type="radio" name="Jenis Kelamin" value="Laki-laki">Laki-laki
+                <input type="radio" name="Jenis Kelamin" value="Laki-laki">Perempuan
+            </td>
+        </tr>
+
+        <tr>
+            <from>
+                <td>Hobi</td>
+                <td>:</td>
+                <td><input type="checkbox" name="hobi" value="Music">Music
+                    <input type="checkbox" name="hobi" value="Olahraga">Olahraga
+                    <input type="checkbox" name="hobi" value="Gaming">Gaming
+                    <input type="checkbox" name="hobi" value="Lainnya">Lainnya
+                </td>
+            </from>
+        </tr>
+
+        <tr width="10%">
+            <td>Ptofil Singkat</td>
+            <td>:</td>
+            <td><textarea rows="4" cols="33"></textarea></td>
+        </tr>
+
+        <tr>
+            <from>
+                <td colspan="3" align="right"><input type="submit" name="input" value="input"></td>
+            </from>
+        </tr>
+    </table> 
+</body>
 </html>
