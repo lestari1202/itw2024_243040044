@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(img/sunset.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  height: 50vh;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(96, 89, 83, 0.797); /* Warna semi-transparan */
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6347; /* Warna logo */
+  padding: 5px;
+  margin-right: 35%;
+  white-space: nowrap;
+  z-index: 20;
+  transition: background-color 0.7s ease;
+}
+
+.logo:hover {
+  background-color: #b19f9f;
+  color: orange;
+  border-radius: 5px;
+}
+
+/* Menu items */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 8px 8px;
+  transition: baackground-color 0.9s ease, color 0.9s ease;
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background-color: rgb(253, 177, 62);
+  color: rgb(241, 14, 14); /* Warna berubah ketika diklik */
+  border-radius: 5px;
+}
+
+/* Menu toggle (3 bars) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar opasitas setelah diklik */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0;
+    transition: right 0.99s ease;
+    transform: translateX(100%);
+  }
+
+  .nav-links.open {
+    right: 0;
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  .nav-item {
+    font-size: 24px;
+  }
+}
+
+/* Img Logo */
+.logo-img {
+  width: 60px;
+  height: 60px;
+  margin-left: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px rgba(255, 99, 71, 0.8), 0 0 20px rgba(255, 99, 71, 0.6),
+    0 0 30px rgba(255, 99, 71, 0.4);
+  transition: box-shadow 0.9s ease;
+}
+
+/* Hover effect untuk menambahkan intensitas */
+.logo-img:hover {
+  box-shadow: 0 0 35px rgba(255, 99, 71, 1), 0 0 45px rgba(255, 99, 71, 0.8),
+    0 0 60px rgba(255, 99, 71, 0.6);
+}
